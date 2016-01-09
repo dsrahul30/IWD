@@ -338,7 +338,7 @@ def compute(all_parameters):
 			highest_quality = max_quality	
 		iteration_count += 1
 
-	solution = [T_TB, highest_quality]
+	solution = [T_TB, highest_quality, 1.0/highest_quality]
 	return solution
 
 # END OF COMPUTE	
@@ -378,7 +378,7 @@ def main():
 	print ''
 	print 'THE BEST SOLUTION FOUND:', solution[0]
 	print 'MAXIMUM QUALITY:', solution[1]
-	print 'TOTAL_DISTANCE:', 1/solution[1]	
+	print 'TOTAL_DISTANCE:', solution[2]	
 	print 'NUMBER OF ITERATIONS:', parameters.parameter_list['maximum_iterations']
 	print ''
 
